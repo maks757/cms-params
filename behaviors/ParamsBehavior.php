@@ -31,8 +31,10 @@ class ParamsBehavior extends Behavior
      */
     public function setParam($key = null, $value = null)
     {
+        $param = new CmsParams();
+        if($p = CmsParams::findOne(['key' => $key]))
+            $param = $p;
         if($key != null && $value != null){
-            $param = new CmsParams();
             $param->key = $key;
             $param->value = $value;
             $param->save();
