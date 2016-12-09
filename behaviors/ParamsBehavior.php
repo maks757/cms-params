@@ -18,8 +18,10 @@ class ParamsBehavior extends Behavior
      */
     public function getParam($key = null)
     {
-        if($key != null)
-            return CmsParams::findOne(['key' => $key])->value;
+        if($key != null) {
+            $data = CmsParams::findOne(['key' => $key]);
+            return !empty($data) ? $data->value : false;
+        }
         return false;
     }
 
