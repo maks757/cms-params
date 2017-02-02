@@ -14,8 +14,8 @@ class ParamsBehavior extends Behavior implements BaseParams
 {
     /**
      * Get param from table
-     * @param $key
-     * @return string
+     * @param string $key
+     * @return mixed
      */
     public function getParam($key = null)
     {
@@ -28,8 +28,8 @@ class ParamsBehavior extends Behavior implements BaseParams
 
     /**
      * Set param to table
-     * @param $key
-     * @param $value
+     * @param string $key
+     * @param mixed $value
      * @return string
      */
     public function setParam($key = null, $value = null)
@@ -48,7 +48,7 @@ class ParamsBehavior extends Behavior implements BaseParams
 
     /**
      * Delete params from table
-     * @param $key
+     * @param string $key
      * @return string
      */
     public function removeParam($key = null)
