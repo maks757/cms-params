@@ -7,9 +7,10 @@ namespace maks757\params\behaviors;
 
 
 use maks757\params\entities\CmsParams;
+use maks757\params\interfaces\BaseParams;
 use yii\base\Behavior;
 
-class ParamsBehavior extends Behavior
+class ParamsBehavior extends Behavior implements BaseParams
 {
     /**
      * Get param from table
